@@ -91,11 +91,11 @@ async function trackVisitor() {
 
 // Default/fallback visitor data (shown when no cached data available)
 const DEFAULT_VISITOR_DATA = [
-    { lat: 35.7796, lng: -78.6382, city: 'Raleigh', country: 'USA', size: 1, color: '#3b82f6', visits: 5 },
-    { lat: 40.7128, lng: -74.0060, city: 'New York', country: 'USA', size: 0.8, color: '#3b82f6', visits: 3 },
-    { lat: 51.5074, lng: -0.1278, city: 'London', country: 'UK', size: 0.6, color: '#60a5fa', visits: 2 },
-    { lat: 35.6762, lng: 139.6503, city: 'Tokyo', country: 'Japan', size: 1, color: '#3b82f6', visits: 4 },
-    { lat: 31.2304, lng: 121.4737, city: 'Shanghai', country: 'China', size: 0.7, color: '#60a5fa', visits: 3 },
+    { lat: 35.7796, lng: -78.6382, city: 'Raleigh', country: 'USA', size: 1, color: '#4f46e5', visits: 5 },
+    { lat: 40.7128, lng: -74.0060, city: 'New York', country: 'USA', size: 0.8, color: '#4f46e5', visits: 3 },
+    { lat: 51.5074, lng: -0.1278, city: 'London', country: 'UK', size: 0.6, color: '#22d3ee', visits: 2 },
+    { lat: 35.6762, lng: 139.6503, city: 'Tokyo', country: 'Japan', size: 1, color: '#4f46e5', visits: 4 },
+    { lat: 31.2304, lng: 121.4737, city: 'Shanghai', country: 'China', size: 0.7, color: '#22d3ee', visits: 3 },
 ];
 
 // Track database connection status
@@ -194,7 +194,7 @@ async function loadVisitorData() {
             country: loc.country,
             visits: loc.visits,
             size: Math.log10(loc.visits + 1) * 0.5 + 0.3,
-            color: loc.visits > 5 ? '#3b82f6' : loc.visits > 2 ? '#60a5fa' : '#93c5fd'
+            color: loc.visits > 5 ? '#4f46e5' : loc.visits > 2 ? '#22d3ee' : '#818cf8'
         }));
 
         // Cache the successful data for future use
@@ -369,7 +369,7 @@ async function initGlobe() {
             .pointColor('color')
             .pointRadius(0.6)
             .pointsMerge(true)
-            .atmosphereColor('#3b82f6')
+            .atmosphereColor('#4f46e5')
             .atmosphereAltitude(0.15)
             .width(containerWidth)
             .height(280)
@@ -424,7 +424,7 @@ async function initGlobe() {
                 .pointAltitude('size')
                 .pointColor('color')
                 .pointRadius(0.6)
-                .atmosphereColor('#3b82f6')
+                .atmosphereColor('#4f46e5')
                 .atmosphereAltitude(0.15)
                 .width(fallbackWidth)
                 .height(280);
