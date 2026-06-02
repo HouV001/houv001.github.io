@@ -412,6 +412,17 @@ body {
     flex-shrink: 0;
 }
 
+/* Contact links: use the theme accent so they stay visible in dark mode */
+.contact-item a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+.contact-item a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
 .icon {
     font-size: var(--font-md);
 }
