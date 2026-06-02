@@ -37,8 +37,8 @@
     --card-gap: clamp(1rem, 2vw, 1.875rem);
 
     /* Light Mode Colors — Aurora (indigo / cyan / violet) */
-    --bg-gradient-start: #eef2f8;
-    --bg-gradient-end: #f7f9fd;
+    --bg-gradient-start: #e6ebf3;
+    --bg-gradient-end: #eef2f8;
     --orb-1-start: #c7d2fe;   /* indigo */
     --orb-1-end: #a5b4fc;
     --orb-2-start: #bdeefa;   /* cyan */
@@ -50,8 +50,8 @@
     --glass-btn-bg: rgba(255, 255, 255, 0.6);
     --glass-btn-bg-hover: rgba(255, 255, 255, 0.82);
     --text-primary: #14181f;
-    --text-secondary: rgba(20, 24, 31, 0.7);
-    --text-tertiary: rgba(20, 24, 31, 0.55);
+    --text-secondary: rgba(20, 24, 31, 0.86);
+    --text-tertiary: rgba(20, 24, 31, 0.7);
     --border-color: rgba(30, 35, 80, 0.09);
     --border-color-strong: rgba(30, 35, 80, 0.13);
     --shadow-color: rgba(30, 35, 80, 0.1);
@@ -76,8 +76,8 @@
     --glass-btn-bg: rgba(21, 28, 50, 0.55);
     --glass-btn-bg-hover: rgba(30, 40, 70, 0.78);
     --text-primary: #e6ebf5;
-    --text-secondary: rgba(230, 235, 245, 0.78);
-    --text-tertiary: rgba(230, 235, 245, 0.58);
+    --text-secondary: rgba(230, 235, 245, 0.9);
+    --text-tertiary: rgba(230, 235, 245, 0.72);
     --border-color: rgba(160, 180, 255, 0.12);
     --border-color-strong: rgba(160, 180, 255, 0.18);
     --shadow-color: rgba(0, 0, 0, 0.35);
@@ -120,19 +120,19 @@ body {
     inset: 0;
     pointer-events: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    opacity: 0.22;
+    opacity: 0.1;
     mix-blend-mode: overlay;
 }
 
 [data-theme="dark"] .background::after {
-    opacity: 0.3;
+    opacity: 0.16;
 }
 
 .gradient-orb {
     position: absolute;
     border-radius: 50%;
     filter: blur(clamp(60px, 8vw, 80px));
-    opacity: 0.6;
+    opacity: 0.45;
     animation: float 20s infinite ease-in-out;
     will-change: transform;
 }
