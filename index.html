@@ -195,9 +195,9 @@
             const manuallySet = localStorage.getItem('themeManuallySet');
             let theme;
             if (manuallySet === 'true') {
-                theme = localStorage.getItem('theme') || 'dark';
+                theme = localStorage.getItem('theme') || getTimeBasedTheme();
             } else {
-                theme = 'dark';
+                theme = getTimeBasedTheme();
             }
             document.documentElement.setAttribute('data-theme', theme);
         })();
