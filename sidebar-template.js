@@ -22,6 +22,10 @@ const sidebarTemplate = `
         <span>zhangcheng@ohtsuki.ics.keio.ac.jp</span>
     </div>
     <div class="contact-item">
+        <span class="icon">📧</span>
+        <span>hou@keio.jp</span>
+    </div>
+    <div class="contact-item">
         <span class="icon">🎓</span>
         <a href="https://scholar.google.com/citations?user=FkuEc38AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
     </div>
