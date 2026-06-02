@@ -366,11 +366,24 @@ body {
 
 .contact-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: var(--spacing-sm);
     margin-bottom: var(--spacing-sm);
     font-size: var(--font-sm);
     color: rgba(0, 0, 0, 0.75);
+}
+
+/* Let the long institutional email wrap inside the narrow sidebar */
+.contact-item > span:not(.icon),
+.contact-item > a {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    line-height: 1.35;
+}
+
+.contact-item .icon {
+    flex-shrink: 0;
 }
 
 .icon {
