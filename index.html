@@ -3,19 +3,162 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>houv001</title>
+  <title>Zhangcheng Hou</title>
+  <meta name="description" content="Zhangcheng Hou — researcher at Keio University working on distributed inference, IoT, and radar-camera depth estimation.">
   <style>
-    body { font-family: system-ui, sans-serif; display: grid; place-items: center;
-           min-height: 100vh; margin: 0; background: #0d1117; color: #e6edf3; }
-    main { text-align: center; }
-    h1 { font-weight: 600; }
-    p { color: #8b949e; }
+    :root {
+      --bg: #ffffff;
+      --fg: #1a1a1a;
+      --muted: #6b7280;
+      --accent: #1f6feb;
+      --border: #e5e7eb;
+      --card: #f9fafb;
+      --maxw: 760px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117; --fg: #e6edf3; --muted: #8b949e;
+        --accent: #58a6ff; --border: #21262d; --card: #161b22;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0; background: var(--bg); color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6; font-size: 17px;
+    }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 56px 24px 80px; }
+    header { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+    .avatar {
+      width: 110px; height: 110px; border-radius: 50%; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--accent), #9333ea);
+      display: grid; place-items: center; color: #fff;
+      font-size: 40px; font-weight: 600; letter-spacing: 1px;
+    }
+    h1 { margin: 0 0 4px; font-size: 30px; font-weight: 700; }
+    .han { color: var(--muted); font-weight: 400; font-size: 18px; margin-left: 8px; }
+    .affil { color: var(--muted); margin: 0; }
+    .links { margin-top: 12px; display: flex; gap: 14px; flex-wrap: wrap; }
+    .links a {
+      color: var(--accent); text-decoration: none; font-size: 15px;
+      border: 1px solid var(--border); padding: 5px 12px; border-radius: 999px;
+      transition: background .15s;
+    }
+    .links a:hover { background: var(--card); }
+    h2 {
+      font-size: 14px; text-transform: uppercase; letter-spacing: .08em;
+      color: var(--muted); margin: 48px 0 16px; font-weight: 600;
+    }
+    section p { margin: 0 0 14px; }
+    .tags { display: flex; gap: 8px; flex-wrap: wrap; }
+    .tags span {
+      background: var(--card); border: 1px solid var(--border);
+      padding: 4px 12px; border-radius: 999px; font-size: 14px; color: var(--fg);
+    }
+    ol.pubs { list-style: none; counter-reset: pub; padding: 0; margin: 0; }
+    ol.pubs li {
+      position: relative; padding: 18px 0 18px 44px;
+      border-bottom: 1px solid var(--border); counter-increment: pub;
+    }
+    ol.pubs li:last-child { border-bottom: none; }
+    ol.pubs li::before {
+      content: counter(pub); position: absolute; left: 0; top: 18px;
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--card); border: 1px solid var(--border);
+      display: grid; place-items: center; font-size: 13px; color: var(--muted);
+    }
+    .pub-title { font-weight: 600; display: block; }
+    .pub-title a { color: var(--fg); text-decoration: none; }
+    .pub-title a:hover { color: var(--accent); }
+    .pub-meta { color: var(--muted); font-size: 15px; }
+    .pub-venue { font-style: italic; }
+    .badge {
+      display: inline-block; margin-left: 8px; font-size: 12px; font-weight: 600;
+      color: var(--accent); border: 1px solid var(--accent); border-radius: 4px;
+      padding: 0 6px; vertical-align: middle;
+    }
+    footer { margin-top: 56px; color: var(--muted); font-size: 14px; }
+    a.plain { color: var(--accent); text-decoration: none; }
+    a.plain:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
-  <main>
-    <h1>houv001</h1>
-    <p>Coming soon.</p>
-  </main>
+  <div class="wrap">
+    <header>
+      <div class="avatar">ZH</div>
+      <div>
+        <h1>Zhangcheng Hou<span class="han">侯张成</span></h1>
+        <p class="affil">Researcher, Ohtsuki Laboratory · Keio University</p>
+        <div class="links">
+          <a href="https://scholar.google.com/citations?user=FkuEc38AAAAJ&hl=en">Google Scholar</a>
+          <a href="https://github.com/HouV001">GitHub</a>
+          <a href="mailto:zhangcheng@ohtsuki.ics.keio.ac.jp">Email</a>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h2>About</h2>
+      <p>
+        I am a researcher at Keio University working at the intersection of
+        machine learning systems and perception. My work spans fault-tolerant
+        distributed inference for lossy IoT environments and multimodal depth
+        estimation, including radar-modulated state space models for
+        radar–camera fusion.
+      </p>
+    </section>
+
+    <section>
+      <h2>Research Interests</h2>
+      <div class="tags">
+        <span>Distributed Inference</span>
+        <span>IoT Systems</span>
+        <span>Fault Tolerance</span>
+        <span>Radar–Camera Fusion</span>
+        <span>Depth Estimation</span>
+        <span>State Space Models</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+      <ol class="pubs">
+        <li>
+          <span class="pub-title">
+            <a href="https://arxiv.org/abs/2605.11840">Selection, Not Fusion: Radar-Modulated State Space Models for Radar-Camera Depth Estimation</a>
+            <span class="badge">arXiv</span>
+          </span>
+          <span class="pub-meta">
+            Zhangcheng Hou, Tomoaki Ohtsuki<br>
+            <span class="pub-venue">arXiv preprint arXiv:2605.11840</span>, 2026
+          </span>
+        </li>
+        <li>
+          <span class="pub-title">
+            Loss-adapter: Addressing network packet loss in distributed inference for lossy IoT environments
+          </span>
+          <span class="pub-meta">
+            Zhangcheng Hou, Tomoaki Ohtsuki<br>
+            <span class="pub-venue">IEEE Internet of Things Journal</span>, 2025
+          </span>
+        </li>
+        <li>
+          <span class="pub-title">
+            A Plug-and-Play Module for Enhancing Fault-Tolerant Distributed Inference Based on Gaussian Dropout
+          </span>
+          <span class="pub-meta">
+            Zhangcheng Hou, Tomoaki Ohtsuki<br>
+            <span class="pub-venue">ICC 2025 — IEEE International Conference on Communications</span>, pp. 4553–4558, 2025
+          </span>
+        </li>
+      </ol>
+    </section>
+
+    <footer>
+      Full publication list and citation metrics on
+      <a class="plain" href="https://scholar.google.com/citations?user=FkuEc38AAAAJ&hl=en">Google Scholar</a>.
+    </footer>
+  </div>
 </body>
 </html>
