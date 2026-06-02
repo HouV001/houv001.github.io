@@ -347,14 +347,14 @@ body {
     transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
 }
 
-/* HFUT crest (white text/fill removed): original red in daytime, white at night */
+/* HFUT full logo (crest + name): theme-specific images swapped by mode.
+   light = red crest + black text · dark = red crest + white text */
 .logo-hfut {
-    height: 2.4em;
+    height: 2em;
 }
-[data-theme="dark"] .logo-hfut {
-    filter: brightness(0) invert(1);
-    opacity: 0.9;
-}
+.logo-hfut-dark { display: none; }
+[data-theme="dark"] .logo-hfut-light { display: none; }
+[data-theme="dark"] .logo-hfut-dark { display: inline-block; }
 
 /* Keio wordmark is dark: natural on light, soft white on the dark sidebar */
 [data-theme="dark"] .logo-keio {
