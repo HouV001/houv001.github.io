@@ -468,7 +468,7 @@ function toggleTheme() {
 }
 
 // Initialize theme before page loads
-initTheme();
+// initTheme(); — disabled: theme is set by the inline per-page script
 
 // Load sidebar content dynamically (only if not already present in HTML)
 function loadSidebar() {
@@ -542,7 +542,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Add click event listener
-        themeToggleBtn.addEventListener('click', toggleTheme);
+        // removed duplicate click listener (inline script handles the toggle)
         console.log('Theme toggle button initialized');
     } else {
         console.error('Theme toggle button not found');
