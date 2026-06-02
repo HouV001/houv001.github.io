@@ -53,10 +53,8 @@
 
             <div class="info-section">
                 <h3>Visitor Map</h3>
-                <!-- Real visitor globe (MapMyVisitors) -->
-                <div class="visitor-map-container">
-                    <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=RyQUc8gNscCptDp5k3L4fOeBxJDv_f_KzEQaCvr2SB8"></script>
-                </div>
+                <!-- Visitor globe (real data via Supabase) -->
+                <div id="globe-container"></div>
             </div>
 
             <div class="theme-toggle-container">
@@ -239,7 +237,11 @@
 
 
 
+    <script src="https://unpkg.com/three@0.150.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/globe.gl@2.27.2/dist/globe.gl.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
     <script src="sidebar-template.js"></script>
-    <script src="script.js?v=4"></script>
+    <script src="script.js?v=5"></script>
 </body>
 </html>

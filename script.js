@@ -358,19 +358,17 @@ async function initGlobe() {
             return;
         }
 
-        // Create the globe - this always works regardless of database status
+        // Create the globe — flat (unlit) material, no atmosphere, transparent background
         globeInstance = Globe()
             (container)
             .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
-            .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
-            .backgroundImageUrl('https://unpkg.com/three-globe/example/img/night-sky.png')
+            .showAtmosphere(false)
+            .backgroundColor('rgba(0,0,0,0)')
             .pointsData(visitorData)
             .pointAltitude('size')
             .pointColor('color')
             .pointRadius(0.6)
             .pointsMerge(true)
-            .atmosphereColor('#4f46e5')
-            .atmosphereAltitude(0.15)
             .width(containerWidth)
             .height(280)
             .pointLabel(d => `
@@ -380,12 +378,32 @@ async function initGlobe() {
                 </div>
             `);
 
-        // Auto-rotate
-        globeInstance.controls().autoRotate = true;
-        globeInstance.controls().autoRotateSpeed = 0.5;
-        globeInstance.controls().enableZoom = false;
+        // Remove lighting effects: make the globe self-illuminated so there is
+        // no day/night shading or specular highlight (retry until texture loads).
+        function applyFlatGlobe(retries) {
+            try {
+                const m = globeInstance && globeInstance.globeMaterial && globeInstance.globeMaterial();
+                if (m && m.map && typeof THREE !== 'undefined') {
+                    m.emissiveMap = m.map;
+                    m.emissive = new THREE.Color(0xffffff);
+                    m.emissiveIntensity = 1.0;
+                    m.color = new THREE.Color(0x000000);
+                    m.needsUpdate = true;
+                    return;
+                }
+            } catch (e) { /* ignore — globe still renders, just lit */ }
+            if (retries > 0) setTimeout(() => applyFlatGlobe(retries - 1), 400);
+        }
+        applyFlatGlobe(10);
 
-        // Set initial view point (centered on North Carolina)
+        // Drag-to-rotate by hand (+ a gentle auto-spin when idle)
+        const controls = globeInstance.controls();
+        controls.enableRotate = true;
+        controls.enableZoom = false;
+        controls.autoRotate = true;
+        controls.autoRotateSpeed = 0.4;
+
+        // Initial view (centered near Japan)
         globeInstance.pointOfView({ lat: 36, lng: 138, altitude: 2.3 }, 0);
 
         console.log('Globe initialized successfully!');
