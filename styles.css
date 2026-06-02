@@ -347,11 +347,9 @@ body {
     transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
 }
 
-/* HFUT crest (white text/fill already removed): black in daytime, white at night */
+/* HFUT crest (white text/fill removed): original red in daytime, white at night */
 .logo-hfut {
     height: 2.4em;
-    filter: brightness(0);
-    opacity: 0.85;
 }
 [data-theme="dark"] .logo-hfut {
     filter: brightness(0) invert(1);
