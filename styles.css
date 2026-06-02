@@ -344,17 +344,21 @@ body {
     vertical-align: middle;
     display: inline-block;
     margin: 0.4em 0.3em 0;
-    /* Light mode: uniform dark monochrome so both university logos match
-       and stay visible (Keio is dark, HFUT is white — this unifies them). */
-    filter: brightness(0);
-    opacity: 0.82;
     transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
 }
 
-/* Dark sidebar: uniform soft white for both logos */
-[data-theme="dark"] .inline-logo {
+/* HFUT red crest: natural color works on light; lift it a bit on the dark sidebar */
+.logo-hfut {
+    height: 2.4em;
+}
+[data-theme="dark"] .logo-hfut {
+    filter: brightness(1.25) saturate(1.1);
+}
+
+/* Keio wordmark is dark: natural on light, soft white on the dark sidebar */
+[data-theme="dark"] .logo-keio {
     filter: brightness(0) invert(1);
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
 .title a {

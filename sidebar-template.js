@@ -6,7 +6,7 @@ const sidebarTemplate = `
         <img src="figures/profile.jpg" alt="Profile Picture" id="profile-img">
     </div>
     <h1 class="name">Zhangcheng Hou</h1>
-    <p class="title">PhD Student · Ohtsuki Laboratory<br><a href="https://www.keio.ac.jp/en/" target="_blank" rel="noopener noreferrer"><img src="figures/keio-en.svg" alt="Keio University" class="inline-logo"></a><a href="https://en.hfut.edu.cn/" target="_blank" rel="noopener noreferrer"><img src="figures/hfut-logo.png" alt="Hefei University of Technology" class="inline-logo"></a></p>
+    <p class="title">PhD Student · Ohtsuki Laboratory<br><a href="https://www.keio.ac.jp/en/" target="_blank" rel="noopener noreferrer"><img src="figures/keio-en.svg" alt="Keio University" class="inline-logo logo-keio"></a><a href="https://en.hfut.edu.cn/" target="_blank" rel="noopener noreferrer"><img src="figures/hfut-logo.png" alt="Hefei University of Technology" class="inline-logo logo-hfut"></a></p>
 </div>
 
 <nav class="page-navigation">
