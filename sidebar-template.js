@@ -6,7 +6,7 @@ const sidebarTemplate = `
         <img src="figures/avatar.svg" alt="Profile Picture" id="profile-img">
     </div>
     <h1 class="name">Zhangcheng Hou</h1>
-    <p class="title">Researcher · Ohtsuki Laboratory<br><a href="https://www.keio.ac.jp/en/" target="_blank" rel="noopener noreferrer" class="affil-link">Keio University</a></p>
+    <p class="title">PhD Student · Ohtsuki Laboratory<br><a href="https://www.keio.ac.jp/en/" target="_blank" rel="noopener noreferrer" class="affil-link">Keio University</a></p>
 </div>
 
 <nav class="page-navigation">
