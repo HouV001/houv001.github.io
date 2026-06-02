@@ -33,7 +33,9 @@ const sidebarTemplate = `
 
 <div class="info-section">
     <h3>Visitor Map</h3>
-    <div id="globe-container"></div>
+    <div class="visitor-map-container">
+        <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=RyQUc8gNscCptDp5k3L4fOeBxJDv_f_KzEQaCvr2SB8"></script>
+    </div>
 </div>
 
 <div class="theme-toggle-container">
