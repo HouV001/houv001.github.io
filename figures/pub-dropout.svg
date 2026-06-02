@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f97316"/>
+      <stop offset="1" stop-color="#db2777"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.7" cy="0.3" r="0.7">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect width="800" height="450" fill="url(#glow)"/>
+  <g fill="#ffffff">
+    <circle cx="300" cy="170" r="14"/><circle cx="380" cy="150" r="10" opacity="0.55"/>
+    <circle cx="460" cy="180" r="16"/><circle cx="540" cy="150" r="9" opacity="0.4"/>
+    <circle cx="340" cy="230" r="9" opacity="0.5"/><circle cx="420" cy="240" r="13"/>
+    <circle cx="500" cy="230" r="10" opacity="0.6"/><circle cx="580" cy="210" r="14"/>
+  </g>
+  <g stroke="#ffffff" stroke-opacity="0.25" stroke-width="2">
+    <line x1="300" y1="170" x2="460" y2="180"/>
+    <line x1="460" y1="180" x2="420" y2="240"/>
+    <line x1="420" y1="240" x2="580" y2="210"/>
+    <line x1="300" y1="170" x2="420" y2="240"/>
+  </g>
+  <text x="56" y="96" fill="#ffffff" font-size="26" font-weight="600" opacity="0.92">IEEE ICC · 2025</text>
+  <text x="56" y="392" fill="#ffffff" font-size="38" font-weight="700">Gaussian-Dropout Plug-in</text>
+  <text x="56" y="430" fill="#ffffff" font-size="22" opacity="0.9">Fault-tolerant distributed inference</text>
+</svg>
