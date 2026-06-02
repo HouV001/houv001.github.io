@@ -319,12 +319,19 @@ body {
 }
 
 .inline-logo {
-    height: 3.5em;
+    height: 2em;
     width: auto;
     vertical-align: middle;
     display: inline-block;
-    margin: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    margin: 0.4em 0 0;
+    transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease;
+}
+
+/* Keep the dark Keio wordmark readable on the dark-theme sidebar */
+[data-theme="dark"] .inline-logo {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 5px 9px;
+    border-radius: 8px;
 }
 
 .title a {
