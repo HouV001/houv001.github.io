@@ -1335,8 +1335,21 @@ html {
     }
 
     .nav-btn {
+        flex: 1 1 0;
+        min-width: 0;
+        justify-content: center;
+        text-align: center;
+        gap: 0.3em;
         font-size: var(--font-sm);
-        padding: var(--spacing-xs) var(--spacing-sm);
+        padding: var(--spacing-xs) 0.35rem;
+    }
+
+    .nav-btn .nav-icon {
+        font-size: var(--font-base);
+    }
+
+    .nav-btn .nav-text {
+        white-space: nowrap;
     }
 
     .nav-btn:hover {
