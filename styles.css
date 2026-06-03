@@ -2169,7 +2169,7 @@ ul.description li:last-child {
     line-height: 1.8;
     color: var(--text-secondary);
     margin: 0;
-    text-align: justify;
+    text-align: left;
 }
 
 /* Beautiful hyperlink styling for intro text */
