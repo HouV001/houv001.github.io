@@ -113,10 +113,10 @@
         }
 
         (function() {
-            const manuallySet = localStorage.getItem('themeManuallySet');
+            const manuallySet = sessionStorage.getItem('themeManuallySet');
             let theme;
             if (manuallySet === 'true') {
-                theme = localStorage.getItem('theme') || getTimeBasedTheme();
+                theme = sessionStorage.getItem('theme') || getTimeBasedTheme();
             } else {
                 theme = getTimeBasedTheme();
             }
@@ -138,17 +138,17 @@
                     const current = document.documentElement.getAttribute('data-theme');
                     const newTheme = current === 'dark' ? 'light' : 'dark';
                     document.documentElement.setAttribute('data-theme', newTheme);
-                    localStorage.setItem('theme', newTheme);
-                    localStorage.setItem('themeManuallySet', 'true');
+                    sessionStorage.setItem('theme', newTheme);
+                    sessionStorage.setItem('themeManuallySet', 'true');
                     icon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
                     text.textContent = newTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
                 });
 
                 themeToggleBtn.addEventListener('dblclick', function() {
-                    localStorage.removeItem('themeManuallySet');
+                    sessionStorage.removeItem('themeManuallySet');
                     const autoTheme = getTimeBasedTheme();
                     document.documentElement.setAttribute('data-theme', autoTheme);
-                    localStorage.setItem('theme', autoTheme);
+                    sessionStorage.setItem('theme', autoTheme);
                     icon.textContent = autoTheme === 'dark' ? '☀️' : '🌙';
                     text.textContent = autoTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
                 });
