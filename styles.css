@@ -2326,8 +2326,10 @@ ul.description li:last-child {
 
 /* Remove underline from existing intro-text link styles for professor links */
 .intro-text .professor-link {
+    display: inline;          /* let "Ohtsuki" / "Laboratory" wrap across lines */
     border-bottom: none;
-    padding-bottom: 2px;
+    padding: 0;
+    margin: 0;
 }
 
 .intro-text .professor-link::after {
